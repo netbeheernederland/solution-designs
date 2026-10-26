@@ -99,7 +99,7 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
  |TA {counter:bea} |Aanname |Doel is inzicht, geen sturing, geen financiële afhandeling.
  |TA {counter:bea} |Aanname |Alleen huidig net en geen geplande uitbreidingen
  |TA {counter:bea} |Beslissing |We prognotiseren 3 jaren vooruit
- |TA {counter:bea} |Beslissing |Wachtrij-informatie valt (vooralsnog) buiten scope.
+ |TA {counter:bea} |Beslissing |Wachtrij-informatie is buiten scope.
  
 |===
 
