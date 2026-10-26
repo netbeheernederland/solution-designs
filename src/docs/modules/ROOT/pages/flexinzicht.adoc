@@ -25,6 +25,13 @@ Binnen Netbeheer Nederland (NBNL) lopen meerdere initiatieven die moeten resulte
 
 Voor dit dataproduct gelden functionele eisen (_functional requirements_). Deze functionele eisen vertellen wie ("*Als rol*") welke data ("*Wil ik*") nodig heeft en welke meerwaarde ermee gecreëerd wordt ("*Want*"). 
 
+////
+Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct voor hem heeft. Wij werken nu onde de aanname dat:
+
+1. de Technisch Adviseur wil weten welke batterijoplossingen (ten behoeve van verzwaring of als regelmiddel) bij dit https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied] haalbaar zijn.
+2. de Technisch Adviseur een uniform overzicht van de oplosdatums (datum vanaf wanneer de congestie is opgelost) van alle bovenliggende congestiegebieden waar een congestiegebied op MS-niveau deel van uit maakt. Deze informatie zal echter beschibaar worden gesteld in een volgende versie van de Capaciteitskaart. Wel is het zo dat de dataproducten Flexinzicht en Capaciteitskaart op elkaar moeten aansluiten.
+////
+
 // In de functionele eisen kunnen sommige woorden #gemarkeerd# zijn. Dat betekent dat de betekenis van dit woord (in deze context) onduidelijk is. Verderop, bij de *Beslissingen en aannames*, wordt een aanname gedaan over die betekenis. Als dat echter niet lukt, of als er een toelichting nodig is dan is de aanname een verzoek om toelichting. 
 
 .Functionele eisen
@@ -37,11 +44,6 @@ Voor dit dataproduct gelden functionele eisen (_functional requirements_). Deze 
  |een uniform overzicht van https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige], https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde] en https://begrippen.netbeheernederland.nl/doc/bma66[regelbare] https://begrippen.netbeheernederland.nl/doc/dwk8c[transportcapaciteit] in een https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied]
  |_wordt nagevraagd bij de TA_.
  
- |TA {counter:fe}
- |Als TA
- |een uniform overzicht van de oplosdatums (datum vanaf wanneer de congestie is opgelost) van alle bovenliggende congestiegebieden waar een congestiegebied op MS-niveau deel van uit maakt
- |_wordt nagevraagd bij de TA_.
-
 |===
 
 // fe 1: ik wil weten welke batterijoplossingen (ten behoeve van verzwaring of als  regelmiddel) bij dit https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied] haalbaar zijn.
@@ -97,7 +99,8 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
  |TA {counter:bea} |Aanname |Doel is inzicht, geen sturing, geen financiële afhandeling.
  |TA {counter:bea} |Aanname |Alleen huidig net en geen geplande uitbreidingen
  |TA {counter:bea} |Beslissing |We prognotiseren 3 jaren vooruit
+ |TA {counter:bea} |Beslissing |Wachtrij-informatie valt (vooralsnog) buiten scope.
  
 |===
 
-Publicatiedatum 20261019.
+Publicatiedatum 20261026.
