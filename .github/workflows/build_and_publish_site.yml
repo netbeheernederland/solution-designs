@@ -7,4 +7,4 @@ permissions:
   id-token: write
 jobs:
   build:
-    uses: netbeheer-nederland/build-doc/.github/workflows/build_and_publish_site.yml@main
+    uses: netbeheernederland/build-doc/.github/workflows/build_and_publish_site.yml@main
