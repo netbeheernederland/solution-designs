@@ -1,0 +1,168 @@
+= Netinzicht per gebied
+
+Dit ontwerp beschrijft het beoogde gebruiksscenario voor het dataproduct
+_Netinzicht per gebied_, alsmede de achterliggende architectuur en gemaakte
+keuzes.
+
+[NOTE]
+====
+include::partial$data_product.adoc[]
+====
+
+== Reikwijdte
+
+Het Energiedataportaal stelt een openbare dataset beschikbaar waarmee
+ondernemers inzicht krijgen in capaciteitsschaarste op het elektriciteitsnet
+per postcodegebied. De informatie is gebaseerd op de voeding vanuit
+onderliggende onderstations en ondersteunt ondernemers bij locatie-,
+uitbreidings- en investeringsbeslissingen.
+
+== Functionele eisen
+
+Het dataproduct is onderheving aan functionele eisen: wat het dataproduct moet
+*doen*.
+
+.Functionele eisen
+[cols="1, 1, 1"]
+|===
+|Als Rol |Wil ik |Want
+
+|Ondernemer
+|in één oogopslag kunnen zien hoe schaars de netcapaciteit is op het relevante
+aansluitniveau in mijn omgeving
+|-
+
+|===
+
+== Dataservice
+
+De gebruiksscenario's beschrijven niet het uitvalproces (_happy flow_), deze
+stappen dienen apart beschreven en geïmplementeerd te worden.
+
+=== Gebruiksscenario
+
+Een externe partij verkrijgt toegang tot een openbaar beschikbare dataset
+vanuit het Energiedataportaal voor hergebruik binnen eigen processen of
+systemen.
+
+.Gebruiksscenario
+[d2,svg,theme=4]
+----
+shape: sequence_diagram
+
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+
+Derde partij -> Energiedataportaal: "1. Raadpleegt beschikbare data"
+Energiedataportaal -> Energiedataportaal: "2. Stelt dataset beschikbaar"
+Derde partij -> Energiedataportaal: "3. Vraagt dataset op"
+Energiedataportaal -> Derde partij: "4. Levert dataset"
+Derde partij -> Derde partij: "5. Verwerkt en gebruikt data"
+----
+
+1. De derde partij raadpleegt het overzicht van beschikbare datasets op basis
+   van een selectie van _dekkingsgebied_/_onderstation_;
+2. De derde partij selecteert een relevante dataset;
+3. De derde partij vraagt de geselecteerde dataset op;
+4. Het Energiedataportaal levert de dataset aan de derde partij;
+5. De derde partij verwerkt de ontvangen gegevens voor het beoogde gebruiksdoel.
+
+=== Architectuur
+
+Voor dit dataproduct wordt gebruik gemaakt van mens, proces en techniek
+beschikbaar ten behoeve van de _NBNL Profile Group_.
+
+== Dataset
+
+Voor de informatiebehoefte van _Netinzicht per gebied_ worden de volgende
+https://modellen.netbeheernederland.nl/solution-designs/use-cases#_onderwerpen[onderwerpen]
+gebruikt:
+
+[cols="1, 1, 1"]
+|===
+|Onderwerp |Profile |Opmerking
+
+|Aanwezige transportcapaciteit
+|Equipment
+|
+
+|Connectiviteit (huidig net)
+|Equipment
+|
+
+|Locatie (postcode+huisnummer)
+|Geographical Location
+|`EnergyConsumer`-s worden op postcode6 geaggregeerd tot postcodegebied.
+
+|Overdrachtspunt
+|Equipment
+|
+
+|Topologie
+|Topology
+|
+
+|Voedingsgebied
+|Equipment
+|
+
+|===
+
+=== Volume, variety, veracity, velocity
+
+[NOTE]
+====
+include::partial$four_v.adoc[]
+====
+
+[cols="1, 1, 1, 1, 1"]
+|===
+|Dataproduct |Volume |Variety |Veracity |Velocity
+
+|https://modellen.netbeheernederland.nl/netinzicht-per-gebied[Netinzicht per gebied]
+|Midden, < 300MB (ongecomprimeerd)
+|Gestructureerd
+|Hoog, de dataset wordt samengesteld uit gegevens vanuit de _NBNL Profile Group_.
+|Laag, verandert alleen wanneer de connectiviteit van het LS-net verandert
+
+|===
+
+== Voorwaarden
+
+Dit dataproduct wordt als _open data_ aangeboden.
+
+== Beslissingen en aannames
+
+[cols="1, 1, 3"]
+|===
+|Datum |Type |Beschrijving
+
+|05-11-2026
+|Beslissing
+|Beschikbare data op MS/LS vanuit de _NBNL Profile Group_ wordt uitgeleverd als
+losstaand dataproduct.
+
+|05-11-2026
+|Beslissing
+|Beschikbare data wordt gefilterd als dataset (JSON) aangeboden op het
+_Centraal Dataportaal_ van _Partners in Energie_.
+
+|06-11-2026
+|Aanname
+|De data wordt als _open dataproduct_ ontsloten.
+
+|06-11-2026
+|Aanname
+|`Aanwezige transportcapaciteit` wordt gecommuniceerd vanuit
+`cim:VoltageLevel`.
+
+|06-11-2026
+|Aanname
+|EDSN maakt een JSON-bestand per onderstation (OS). Hiervoor worden
+stations/overdrachtspunten op LS-niveau geaggregeerd tot MS-niveau. Dit levert
+in totaal ~200 JSON-bestanden voor publicatie.
+
+|===
