@@ -81,33 +81,32 @@ Voor de informatiebehoefte van _Netinzicht per gebied_ worden de volgende
 https://modellen.netbeheernederland.nl/solution-designs/use-cases#_onderwerpen[onderwerpen]
 gebruikt:
 
-[cols="1, 1, 1"]
+[cols="1, 1, 2"]
 |===
 |Onderwerp |Profile |Opmerking
 
 |Aanwezige transportcapaciteit
 |Equipment
-|
+|Aanwezige transportcapaciteit wordt vanaf de invoedende `PowerTransformer`-s
+voor het gevraagde `VoltageLevel` afgeleid.
 
 |Connectiviteit (huidig net)
 |Equipment
-|
+|`Substation`, `VoltageLevel` en `EnergyConsumer` zijn vereist voor de use
+case.
 
 |Locatie (postcode+huisnummer)
 |Geographical Location
 |`EnergyConsumer`-s worden op postcode6 geaggregeerd tot postcodegebied.
 
-|Overdrachtspunt
-|Equipment
-|
-
 |Topologie
 |Topology
-|
+|`TopologicalNode` is vereist voor de relatie `EnergyConsumer`/`VoltageLevel`.
 
 |Voedingsgebied
 |Equipment
-|
+|`Substation` op een `BaseVoltage` van 150/220 kV is het beginpunt van een
+voedingsgebied.
 
 |===
 
