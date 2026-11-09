@@ -146,7 +146,7 @@ losstaand dataproduct.
 
 |05-11-2026
 |Beslissing
-|Beschikbare data wordt gefilterd als dataset (JSON) aangeboden op het
+|Beschikbare data wordt gefilterd als dataset (JSON-LD) aangeboden op het
 _Centraal Dataportaal_ van _Partners in Energie_.
 
 |06-11-2026
@@ -160,8 +160,8 @@ _Centraal Dataportaal_ van _Partners in Energie_.
 
 |06-11-2026
 |Aanname
-|EDSN maakt een JSON-bestand per onderstation (OS). Hiervoor worden
+|EDSN maakt een JSON-LD bestand per onderstation (OS). Hiervoor worden
 stations/overdrachtspunten op LS-niveau geaggregeerd tot MS-niveau. Dit levert
-in totaal ~200 JSON-bestanden voor publicatie.
+in totaal ~200 JSON-LD bestanden voor publicatie.
 
 |===
