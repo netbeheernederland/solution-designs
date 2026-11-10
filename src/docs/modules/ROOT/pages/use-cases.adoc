@@ -290,7 +290,7 @@ a|
 * `?`
 
 |Cluster van laadpalen
-|Equipment
+|Equipment, Topology
 a|
 * `{eq}EnergyConsumer[EnergyConsumer]`
 * `{eq}UsagePoint[UsagePoint]`
