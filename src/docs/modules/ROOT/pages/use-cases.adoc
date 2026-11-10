@@ -162,14 +162,13 @@ a|
 |LS
 a|
 * Aanwezige transportcapaciteit
-* *Charge Point Operator*
+* Belastingprofiel (historisch, 1j, 15m)
 * Connectiviteit (huidig net)
-* *Cluster van laadpalen*
+* Cluster van laadpalen
 * Locatie (postcode+huisnummer)
 * Locatie (WGS84)
 * Netveiligheid
 * Overdrachtspunt
-* Piekbelasting (historisch, 1j)
 * Topologie
 * Voedingsgebied
 
@@ -265,6 +264,11 @@ a|
 a|
 * `{op}Analog[Analog]`
 
+|Belastingprofiel (historisch, 1j, 15m)
+|Operation
+a|
+* `{op}Analog[Analog]`
+
 |Belastingprofiel (historisch, 24+48u, 15m)
 |Operation
 a|
@@ -289,8 +293,9 @@ a|
 |Equipment
 a|
 * `{eq}EnergyConsumer[EnergyConsumer]`
-* `{eq}ReportingGroup[ReportingGroup] (?)`
 * `{eq}UsagePoint[UsagePoint]`
+* `{tp}BusNameMarker[BusNameMarker] (?)`
+* `{tp}TopologicalNode[TopologicalNode] (?)`
 
 |https://begrippen.netbeheernederland.nl/doc/7qmcr[Congestiegebied]
 |Asset, Geographical Location
