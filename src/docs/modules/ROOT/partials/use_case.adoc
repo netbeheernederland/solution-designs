@@ -8,7 +8,7 @@ vanuit het Energiedataportaal voor hergebruik binnen eigen processen of
 systemen.
 
 .Gebruiksscenario
-[d2,svg,theme=4]
+[d2,svg,theme=4,width=60%]
 ----
 shape: sequence_diagram
 
