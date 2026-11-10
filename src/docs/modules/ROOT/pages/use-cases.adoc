@@ -284,11 +284,6 @@ a|
 a|
 * `{op}Analog[Analog]`
 
-|Charge Point Operator
-|*Market*
-a|
-* `?`
-
 |Cluster van laadpalen
 |Equipment, Topology
 a|
