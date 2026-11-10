@@ -53,25 +53,25 @@ gebruikt:
 |Onderwerp |Profile |Opmerking
 
 |Aanwezige transportcapaciteit
-|Equipment
+|Equipment >= 3.0
 |`ActivePowerLimit` op `PowerTransformer` of `SeriesEquipmentDependentLimit`.
 
 |Connectiviteit (huidig net)
-|Equipment
+|Equipment >= 3.0
 |Er wordt een JSON-LD bestand gemaakt voor elk onderstation (`Substation` met
 `BaseVoltage` van 150 kV of 220 kV secundair) met bijbehorende
 `PowerTransformer`-s en postcodegebieden.
 
 |Locatie (postcode6)
-|Geographical Location
+|Geographical Location >= 1.3
 |Postcodegebied (1234AB) ingevoed door `Substation`.
 
 |Topologie
-|Topology
+|Topology >= 2.0
 |-
 
 |Voedingsgebied
-|Equipment
+|Equipment >= 3.0
 |-
 
 |===
