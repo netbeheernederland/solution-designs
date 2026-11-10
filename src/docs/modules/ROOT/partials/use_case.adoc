@@ -1,0 +1,33 @@
+Het gebruiksscenario beschrijft niet het uitvalproces (_happy flow_), deze
+stappen dienen apart beschreven en geïmplementeerd te worden.
+
+=== Gebruiksscenario
+
+Een externe partij verkrijgt toegang tot een openbaar beschikbare dataset
+vanuit het Energiedataportaal voor hergebruik binnen eigen processen of
+systemen.
+
+.Gebruiksscenario
+[d2,svg,theme=4]
+----
+shape: sequence_diagram
+
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+
+Derde partij -> Energiedataportaal: "1. Raadpleegt beschikbare data"
+Energiedataportaal -> Energiedataportaal: "2. Stelt dataset beschikbaar"
+Derde partij -> Energiedataportaal: "3. Vraagt dataset op"
+Energiedataportaal -> Derde partij: "4. Levert dataset"
+Derde partij -> Derde partij: "5. Verwerkt en gebruikt data"
+----
+
+1. De derde partij raadpleegt het overzicht van beschikbare datasets op basis
+   van een selectie van _dekkingsgebied_/_onderstation_;
+2. De derde partij selecteert een relevante dataset;
+3. De derde partij vraagt de geselecteerde dataset op;
+4. Het Energiedataportaal levert de dataset aan de derde partij;
+5. De derde partij verwerkt de ontvangen gegevens voor het beoogde gebruiksdoel.

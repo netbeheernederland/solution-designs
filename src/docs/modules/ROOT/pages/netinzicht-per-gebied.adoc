@@ -36,44 +36,11 @@ aansluitniveau in mijn omgeving
 
 == Dataservice
 
-De gebruiksscenario's beschrijven niet het uitvalproces (_happy flow_), deze
-stappen dienen apart beschreven en geïmplementeerd te worden.
-
-=== Gebruiksscenario
-
-Een externe partij verkrijgt toegang tot een openbaar beschikbare dataset
-vanuit het Energiedataportaal voor hergebruik binnen eigen processen of
-systemen.
-
-.Gebruiksscenario
-[d2,svg,theme=4]
-----
-shape: sequence_diagram
-
-vars: {
-  d2-config: {
-    pad: 20
-  }
-}
-
-Derde partij -> Energiedataportaal: "1. Raadpleegt beschikbare data"
-Energiedataportaal -> Energiedataportaal: "2. Stelt dataset beschikbaar"
-Derde partij -> Energiedataportaal: "3. Vraagt dataset op"
-Energiedataportaal -> Derde partij: "4. Levert dataset"
-Derde partij -> Derde partij: "5. Verwerkt en gebruikt data"
-----
-
-1. De derde partij raadpleegt het overzicht van beschikbare datasets op basis
-   van een selectie van _dekkingsgebied_/_onderstation_;
-2. De derde partij selecteert een relevante dataset;
-3. De derde partij vraagt de geselecteerde dataset op;
-4. Het Energiedataportaal levert de dataset aan de derde partij;
-5. De derde partij verwerkt de ontvangen gegevens voor het beoogde gebruiksdoel.
+include::partial$use_case.adoc[]
 
 === Architectuur
 
-Voor dit dataproduct wordt gebruik gemaakt van mens, proces en techniek
-beschikbaar ten behoeve van de _NBNL Profile Group_.
+include::partial$architecture.adoc[]
 
 == Dataset
 
@@ -87,26 +54,25 @@ gebruikt:
 
 |Aanwezige transportcapaciteit
 |Equipment
-|Aanwezige transportcapaciteit wordt vanaf de invoedende `PowerTransformer`-s
-voor het gevraagde `VoltageLevel` afgeleid.
+|`ActivePowerLimit` op `PowerTransformer` of `SeriesEquipmentDependentLimit`.
 
 |Connectiviteit (huidig net)
 |Equipment
-|`Substation`, `VoltageLevel` en `EnergyConsumer` zijn vereist voor de use
-case.
+|Er wordt een JSON-LD bestand gemaakt voor elk onderstation (`Substation` met
+`BaseVoltage` van 150 kV of 220 kV secundair) met bijbehorende
+`PowerTransformer`-s en postcodegebieden.
 
-|Locatie (postcode+huisnummer)
+|Locatie (postcode6)
 |Geographical Location
-|`EnergyConsumer`-s worden op postcode6 geaggregeerd tot postcodegebied.
+|Postcodegebied (1234AB) ingevoed door `Substation`.
 
 |Topologie
 |Topology
-|`TopologicalNode` is vereist voor de relatie `EnergyConsumer`/`VoltageLevel`.
+|-
 
 |Voedingsgebied
 |Equipment
-|`Substation` op een `BaseVoltage` van 150/220 kV is het beginpunt van een
-voedingsgebied.
+|-
 
 |===
 
@@ -125,7 +91,8 @@ include::partial$four_v.adoc[]
 |Midden, < 300MB (ongecomprimeerd)
 |Gestructureerd
 |Hoog, de dataset wordt samengesteld uit gegevens vanuit de _NBNL Profile Group_.
-|Laag, verandert alleen wanneer de connectiviteit van het LS-net verandert
+|Laag, verandert alleen wanneer de connectiviteit van het gepubliceerde net
+verandert
 
 |===
 
@@ -146,8 +113,8 @@ losstaand dataproduct.
 
 |05-11-2026
 |Beslissing
-|Beschikbare data wordt gefilterd als dataset (JSON-LD) aangeboden op het
-_Centraal Dataportaal_ van _Partners in Energie_.
+|Beschikbare data wordt als dataset (JSON-LD) aangeboden op het _Centraal
+Dataportaal_ van _Partners in Energie_.
 
 |06-11-2026
 |Aanname
@@ -155,13 +122,8 @@ _Centraal Dataportaal_ van _Partners in Energie_.
 
 |06-11-2026
 |Aanname
-|`Aanwezige transportcapaciteit` wordt gecommuniceerd vanuit
-`cim:VoltageLevel`.
-
-|06-11-2026
-|Aanname
 |EDSN maakt een JSON-LD bestand per onderstation (OS). Hiervoor worden
-stations/overdrachtspunten op LS-niveau geaggregeerd tot MS-niveau. Dit levert
-in totaal ~200 JSON-LD bestanden voor publicatie.
+stations/overdrachtspunten op LS-niveau geaggregeerd tot MS-niveau. Dit
+resulteert in totaal ~200 JSON-LD bestanden voor publicatie.
 
 |===
