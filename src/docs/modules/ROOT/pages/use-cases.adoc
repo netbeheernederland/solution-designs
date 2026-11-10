@@ -294,8 +294,8 @@ a|
 a|
 * `{eq}EnergyConsumer[EnergyConsumer]`
 * `{eq}UsagePoint[UsagePoint]`
-* `{tp}BusNameMarker[BusNameMarker] (?)`
-* `{tp}TopologicalNode[TopologicalNode] (?)`
+* `{tp}BusNameMarker[BusNameMarker]`
+* `{tp}TopologicalNode[TopologicalNode]`
 
 |https://begrippen.netbeheernederland.nl/doc/7qmcr[Congestiegebied]
 |Asset, Geographical Location
