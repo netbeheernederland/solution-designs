@@ -25,8 +25,7 @@ Energiedataportaal -> Derde partij: "4. Levert dataset"
 Derde partij -> Derde partij: "5. Verwerkt en gebruikt data"
 ----
 
-1. De derde partij raadpleegt het overzicht van beschikbare datasets op basis
-   van een selectie van _dekkingsgebied_/_onderstation_;
+1. De derde partij raadpleegt het overzicht van beschikbare datasets;
 2. De derde partij selecteert een relevante dataset;
 3. De derde partij vraagt de geselecteerde dataset op;
 4. Het Energiedataportaal levert de dataset aan de derde partij;

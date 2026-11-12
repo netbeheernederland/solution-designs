@@ -172,10 +172,14 @@ a|
 * Topologie
 * Voedingsgebied
 
-|Netinzicht
+|Netinzicht per gebied
 |HS & MS
 a|
-* `?`
+* Aanwezige transportcapaciteit
+* Connectiviteit (huidig net)
+* Locatie (postcode6)
+* Topologie
+* Voedingsgebied
 
 |Nettopologie, belasting en capaciteit
 |MS & LS
