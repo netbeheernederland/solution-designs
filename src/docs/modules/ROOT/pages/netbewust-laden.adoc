@@ -26,183 +26,83 @@ van elektriciteit en overbelasting door pieken in de vraag te voorkomen. Het
 alternatief is het verzwaren van het net wat een lange doorlooptijd kent, hoge
 investeringen en de energie transitie zal vertragen.
 
+== Functionele eisen
+
+Het dataproduct is onderheving aan functionele eisen: wat het dataproduct moet
+*doen*.
+
+.Functionele eisen
+[cols="1, 1, 1"]
+|===
+|Als Rol |Wil ik |Want
+
+|
+|
+|
+
+|===
+
 == Dataservice
 
-=== Gebruiksscenario
-
-Het volgende gebruiksscenario wordt ondersteund:
-
-.Gebruiksscenario
-[d2,svg,theme=4]
-----
-shape: sequence_diagram
-
-vars: {
-  d2-config: {
-    pad: 20
-  }
-}
-
-Gebruiker -> EDSN: 1. Zoek dataproduct op NBNL Dataportaal
-EDSN -> Gebruiker: 2. Vind dataproduct
-Gebruiker -> Netbeheerder: 3. Vraag dataset bij individuele netbeheerder
-Netbeheerder -> Gebruiker: 4. Lever dataset
-Gebruiker -> Gebruiker: 5. Verwerk dataset
-----
-
-1. de gebruiker zoekt het dataproduct op het NBNL Dataportaal;
-2. de gebruiker vindt het gezochte dataproduct;
-3. de gebruiker downloadt de dataset voor een individuele netbeheerder vanuit
-   de decentrale dataservice;
-4. de netbeheerder levert de dataset;
-5. de gebruiker verwerkt de dataset(s) voor eigen doeleinden.
+include::partial$use_case.adoc[]
 
 === Architectuur
 
-Vanuit architectuurperspectief zijn de volgende keuzes gemaakt:
-
-.Architectuur
-[d2,svg,theme=4,scaledwidth=100%]
-----
-vars: {
-  d2-config: {
-    pad: 20
-  }
-}
-
-grid-rows: 5
-grid-columns: 4
-
-vertical-gap: 80
-horizontal-gap: 160
-
-"Netbeheerder".class: [noun; business]
-Consumer.class: [noun; business]
-1.class: empty
-2.class: empty
-
-3.class: empty
-Extract.class: [verb; business]
-Transform.class: [verb; business]
-Load.class: [verb; business]
-
-"HTTP Server".class: [noun; application]
-"Data Product".class: [noun; application]
-"NBNL Dataportaal".class: [noun; application]
-4.class: empty
-
-5.class: empty
-"JSON File".class: [artifact; technology]
-
-Extract -> Transform: "triggers"
-Transform -> Load: "triggers"
-"Data Product" -> "Extract": "serves"
-"NBNL Dataportaal" -> "Data Product": "accesses (read)"
-Consumer -> Extract: "assigned to"
-"JSON File" -> "Data Product": "realises"
-"HTTP Server" -> "Data Product": "accesses (read)"
-"Netbeheerder" -> "HTTP Server": "assigned to"
-
-legend: "" {
-  style: {
-    fill: transparent
-    stroke: transparent
-  }
-  grid-rows: 3
-  grid-columns: 2
-  grid-gap: 10
-  near: bottom-right
-  business_color: "" {
-    style: {
-      fill: "#ffffaf"
-      stroke: black
-      stroke-width: 1
-    }
-    width: 10
-    height: 10
-  }
-  business_text: "Business" {
-    shape: text
-  }
-  application_color: "" {
-    style: {
-      fill: "#afffff"
-      stroke: black
-      stroke-width: 1
-    }
-    width: 10
-    height: 10
-  }
-  application_text: "Application" {
-    shape: text
-  }
-  technology_color: "" {
-    style: {
-      fill: "#afffaf"
-      stroke: black
-      stroke-width: 1
-    }
-    width: 10
-    height: 10
-  }
-  technology_text: "Technology" {
-    shape: text
-  }
-}
-
-classes: {
-  *: {
-    style: {
-      shadow: true
-    }
-  }
-  empty: {
-    label: ""
-    style: {
-      fill: transparent
-      stroke-width: 0
-    }
-  }
-  verb: {
-    style: {border-radius: 30}
-  }
-  noun: {
-    style: {border-radius: 4}
-  }
-  artifact: {shape: page}
-  business: {
-    style: {
-      fill: "#ffffaf"
-    }
-  }
-  application: {
-    style: {
-      fill: "#afffff"
-    }
-  }
-  technology: {
-    style: {
-      fill: "#afffaf"
-    }
-  }
-}
-
-----
-
-* de structuur (logisch model) van de dataset behorende bij het dataproduct is
-  gebaseerd op het conceptuele model _Begrippenmodel NBNL_ en het _Common
-  Information Model_;
-* aanlevering van de dataset vanuit de netbeheerder geschiedt via JSON-bestand.
-  Een JSON Schema op basis van het logisch model is hiervoor beschikbaar
-  gemaakt;
-* netbeheerders leveren de dataset aan via een eigen bestandslocatie;
-* het dataproduct _Netbewust Laden_ is vindbaar via het NBNL Dataportaal.
+include::partial$architecture.adoc[]
 
 == Dataset
 
-De dataset beschrijft capaciteits- en belastinginformatie voor kabels en
-transformatoren, clustering van laadpalen en bijbehorende _Charge Point
-Operators_ (CPO).
+De dataset beschrijft capaciteits- en belastinginformatie voor transformatoren
+en clustering van laadpalen. Voor de informatiebehoefte van _NetBewust Laden_
+worden de volgende
+https://modellen.netbeheernederland.nl/solution-designs/use-cases#_onderwerpen[onderwerpen]
+gebruikt:
+
+[cols="1, 1, 2"]
+|===
+|Onderwerp |Profile |Opmerking
+
+|Aanwezige transportcapaciteit
+|Equipment >= 3.0
+|-
+
+|Belastingprofiel (historisch, 1j, 15m)
+|Operation >= 3.0
+|-
+
+|Connectiviteit (huidig net)
+|Equipment >= 3.0
+|-
+
+|Cluster van laadpalen
+|Topology >= 2.0
+|-
+
+|Locatie (postcode+huisnummer)
+|Geographical Location >= 1.3
+|-
+
+|Locatie (WGS84)
+|Geographical Location >= 1.3
+|-
+
+|Netveiligheid
+|Equipment >= 3.0
+|-
+
+|Overdrachtspunt
+|Equipment >= 3.0
+|-
+
+|Topologie
+|Topology >= 2.0
+|-
+
+|Voedingsgebied
+|Equipment >= 3.0
+|-
+
+|===
 
 === Volume, variety, veracity, velocity
 
@@ -211,21 +111,16 @@ Operators_ (CPO).
 include::partial$four_v.adoc[]
 ====
 
-[cols="1, 1"]
+[cols="1, 1, 1, 1, 1"]
 |===
-|Type |Beschrijving
+|Dataproduct |Volume |Variety |Veracity |Velocity
 
-|Volume
+|https://modellen.netbeheernederland.nl/netbewust-laden[Netbewust Laden]
 |Laag, < 100MB (ongecomprimeerd)
-
-|Variety
 |Gestructureerd
+|Hoog, de dataset wordt samengesteld uit gegevens vanuit de _NBNL Profile Group_.
+|Laag, verandert alleen wanneer de connectiviteit van het gepubliceerde net verandert
 
-|Veracity
-|Medium, sluit aan op het bestaande inzicht van de netbeheerder in het LS-net
-
-|Velocity
-|Laag, dataset verandert wanneer de clustering verandert
 |===
 
 == Voorwaarden
@@ -234,10 +129,22 @@ Dit dataproduct wordt als _open data_ aangeboden.
 
 == Beslissingen en aannames
 
-[cols="1, 1"]
+[cols="1, 1, 3"]
 |===
-|Type |Beschrijving
+|Datum |Type |Beschrijving
 
+|13-11-2026
 |Beslissing
-|Dataproduct _NetBewust Laden_ wordt als decentraal dataproduct onder een gecentraliseerd schema beschikbaar gemaakt.
+|Beschikbare data op *LS* vanuit de _NBNL Profile Group_ wordt gepubliceerd als
+losstaand dataproduct.
+
+|13-11-2026
+|Beslissing
+|Beschikbare data wordt als dataset (JSON-LD) aangeboden op het _Centraal
+Dataportaal_ van _Partners in Energie_.
+
+|13-11-2026
+|Aanname
+|De data wordt als _open dataproduct_ ontsloten.
+
 |===

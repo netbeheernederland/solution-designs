@@ -108,8 +108,8 @@ Dit dataproduct wordt als _open data_ aangeboden.
 
 |05-11-2026
 |Beslissing
-|Beschikbare data op MS/LS vanuit de _NBNL Profile Group_ wordt uitgeleverd als
-losstaand dataproduct.
+|Beschikbare data op MS/LS vanuit de _NBNL Profile Group_ wordt gepubliceerd
+als losstaand dataproduct.
 
 |05-11-2026
 |Beslissing

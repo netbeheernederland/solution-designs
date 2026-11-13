@@ -4,6 +4,7 @@
 * xref::flexinzicht.adoc[]
 * xref::meetdata.adoc[]
 * xref::netcode-h13.adoc[]
+* xref::netbewust-laden.adoc[]
 * xref::netinzicht-per-gebied.adoc[]
 * xref::nettopologie-belasting-capaciteit.adoc[]
 * xref::rijksinspectie-digitale-infrastructuur.adoc[]
