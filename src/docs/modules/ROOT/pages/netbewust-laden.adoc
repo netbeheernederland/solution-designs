@@ -36,11 +36,29 @@ Het dataproduct is onderheving aan functionele eisen: wat het dataproduct moet
 |===
 |Als Rol |Wil ik |Want
 
-|
-|
-|
+|CPO, gemeente of NAL-regio
+|per station inzicht hebben in het belastingprofiel over een volledig jaar,
+inclusief de frequentie, hoogte en duur van belastingpieken
+|-
+
+|CPO, gemeente of NAL-regio
+|inzicht in het belastingprofiel kunnen relateren aan de aan het station
+gekoppelde publieke laadpalen.
+|-
 
 |===
+
+Toelichting bij de functionele eisen:
+
+* Het dataproduct moet de vastgestelde belasting per station per kwartier over
+  minimaal één volledig historisch jaar beschikbaar stellen;
+* Het dataproduct moet inzicht bieden in de frequentie, hoogte en duur van
+  belastingpieken per station;
+* Het dataproduct moet inzicht bieden in de publieke laadpalen die aan het
+  betreffende station zijn gekoppeld;
+* De gegevens moeten zodanig beschikbaar zijn dat CPO's, gemeenten en
+  NAL-regio's het belastingprofiel van een station in relatie tot de gekoppelde
+  publieke laadinfrastructuur kunnen analyseren.
 
 == Dataservice
 
@@ -64,19 +82,22 @@ gebruikt:
 
 |Aanwezige transportcapaciteit
 |Equipment >= 3.0
-|-
+|als `ActivePowerLimit` gepubliceerd via `PowerTransformer` of
+`SeriesEquipmentDependentLimit`.
 
 |Belastingprofiel (historisch, 1j, 15m)
 |Operation >= 3.0
-|-
+|kwartierwaarden gepubliceerd als `Analog` met corresponderende `AnalogValue`-s
+met `timeStamp`.
 
 |Connectiviteit (huidig net)
 |Equipment >= 3.0
-|-
+|`SubGeographicalRegion`, `Substation`, `PowerTransformer` en `EnergyConsumer`.
 
 |Cluster van laadpalen
 |Topology >= 2.0
-|-
+|`EnergyConsumer` wordt via `TopologicalNode`-s geclusterd. `TopologicalNode`-s
+die een cluster van laadpalen vormen hebben een specifieke `BusNameMarker`.
 
 |Locatie (postcode+huisnummer)
 |Geographical Location >= 1.3
@@ -88,7 +109,8 @@ gebruikt:
 
 |Netveiligheid
 |Equipment >= 3.0
-|-
+|`SeriesEquipmentDependentLimit`, daar waar groepen van netfuncties een
+gezamenlijke _Aanwezige transportcapaciteit` hebben.
 
 |Overdrachtspunt
 |Equipment >= 3.0
@@ -96,11 +118,11 @@ gebruikt:
 
 |Topologie
 |Topology >= 2.0
-|-
+|relatie tussen overdrachtspunt en `PowerTransformerEnd`
 
 |Voedingsgebied
 |Equipment >= 3.0
-|-
+|`TransformerEnd.endNumber` `2` of `3` als beginpunt van een voedingsgebied.
 
 |===
 
@@ -135,16 +157,16 @@ Dit dataproduct wordt als _open data_ aangeboden.
 
 |13-11-2026
 |Beslissing
-|Beschikbare data op *LS* vanuit de _NBNL Profile Group_ wordt gepubliceerd als
-losstaand dataproduct.
-
-|13-11-2026
-|Beslissing
 |Beschikbare data wordt als dataset (JSON-LD) aangeboden op het _Centraal
 Dataportaal_ van _Partners in Energie_.
 
 |13-11-2026
 |Aanname
 |De data wordt als _open dataproduct_ ontsloten.
+
+|13-11-2026
+|Aanname
+|Beschikbare data op *LS* vanuit de _NBNL Profile Group_ wordt gepubliceerd als
+losstaand dataproduct. Het dataproduct bevat alleen LS-netstations.
 
 |===
