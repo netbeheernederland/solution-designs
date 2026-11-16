@@ -169,4 +169,8 @@ Dataportaal_ van _Partners in Energie_.
 |Beschikbare data op *LS* vanuit de _NBNL Profile Group_ wordt gepubliceerd als
 losstaand dataproduct. Het dataproduct bevat alleen LS-netstations.
 
+|16-11-2026
+|Aanname
+|CPO-naam is geen onderdeel van het dataproduct.
+
 |===
