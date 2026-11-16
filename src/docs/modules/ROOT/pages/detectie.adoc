@@ -132,7 +132,7 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 |{counter:bea}
 |Beslissing
 // [Doco 00.01] - 20260824 - DEIA - Ontwerp
-|Niets gebeurt in strijd met GEMS.
+|Het GEMS-advies zal worden opgevolgd.
 
 |{counter:bea}
 |Beslissing
@@ -166,8 +166,8 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 
 |{counter:bea}
 |Beslissing
-// [Doco 00.01] - 20260824 - DEIA - Ontwerp
-|Elk Data Scientist team levert haar dataset aan in JSON-formaat.
+// [Doco 00.05] - DEIA - CIM-schema en aanlevering
+|Elk Data Scientist team levert haar dataset aan in JSON-LD-formaat.
 
 |{counter:bea}
 |Beslissing
@@ -216,8 +216,8 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 
 |{counter:bea}
 |Beslissing
-// [Doco 00.01] - 20260824 - DEIA - Ontwerp
-|Het open dataproduct wordt, net als de datasets, aangeleverd in JSON-formaat conform CIM.
+// [Doco 00.05] - DEIA - CIM-schema en aanlevering
+|Het open dataproduct wordt, net als de datasets, aangeleverd in JSON-LD-formaat conform CIM.
 
 |{counter:bea}
 |Beslissing
@@ -251,7 +251,7 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 
 |{counter:bea}
 |Aanname
-|Gemeente is op zoek naar energie-intensieve apparaten, onafhankelijk van bron (detectie of registratie). De werkgroep heeft ervoor gekozen om enkel gedetecteerde apparaten te communiceren. TODO: achterliggende reden?
+|Gemeente is op zoek naar energie-intensieve apparaten, onafhankelijk van bron (detectie of registratie). De werkgroep heeft ervoor gekozen om enkel gedetecteerde apparaten te communiceren.
 
 |{counter:bea}
 |Aanname
@@ -269,4 +269,16 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 |Aanname
 |De datadeel teams van de netbeheerders kunnen de data conform het CIM-schema op overdrachtspunt volgens het bestaande proces aanleveren bij EDSN; in JSON-LD per bouwblok.
 
+|{counter:bea}
+|Beslissing
+|Het CIM-schema ondersteunt zowel geaggregeerde (PC6) als niet geaggregeerde (ge-enummereerde) data (PC6+huisnummer).
+
+ |{counter:bea}
+ |Beslissing
+// [Doco 00.05] - DEIA - CIM-schema en aanlevering
+a|Voor het dataproduct zijn de volgende drie profielen nodig: 
+
+* https://modellen.netbeheernederland.nl/nbnl-equipment/3.0/index.html[NBNL Equipment], met een https://github.com/netbeheernederland/nbnl-examples/_layout/main/src/examples/profile-group/yml/eq-dso-lv.example.yml[voorbeelduitwerking] van `cim:EnergyConsumer/cim:UsagePoint` op LS,
+* https://modellen.netbeheernederland.nl/nbnl-topology/2.0/index.html[NBNL Topology] , met een https://github.com/netbeheernederland/nbnl-examples/_layout/main/src/examples/profile-group/yml/tp-dso-lv.example.yml[voorbeelduitwerking] van de koppeling tussen `cim:PowerTransformerEnd` en `cim:EnergyConsumer` om de punt van belasting in het LS-net te kunnen plaatsen
+* https://modellen.netbeheernederland.nl/nbnl-operation/draft-deia/index.html[NBNL Operation], met een https://github.com/netbeheernederland/nbnl-examples/blob/main/src/examples/profile-group/yml/op-dso-lv.example.yml[voorbeelduitwerking] van de waarden die bij een overdrachtspunt in Equipment horen. Dit zijn de waarden die vanuit het machinelearningmodel worden gegenereerd. Hiervoor wordt `cim:Analog generiek` ingezet; de naam van elke meetwaarde behorende bij een overdrachtspunt duidt wat voor type waarde het is. 
 |===

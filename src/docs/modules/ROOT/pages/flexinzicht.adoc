@@ -39,15 +39,23 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 |===
 |ID |Als rol |Wil ik |Want
 
- |TA {counter:fe}
- |Als TA
- |een uniform overzicht van https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige], https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde] en https://begrippen.netbeheernederland.nl/doc/bma66[regelbare] https://begrippen.netbeheernederland.nl/doc/dwk8c[transportcapaciteit] in een https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied]
- |_wordt nagevraagd bij de TA_.
+  |TA {counter:fe}
+  |Als TA
+//een uniform overzicht van https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige], https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde] en https://begrippen.netbeheernederland.nl/doc/bma66[regelbare] https://begrippen.netbeheernederland.nl/doc/dwk8c[transportcapaciteit] in een https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied]
+  a|een uniform overzicht van
+
+  * zogenoemde **onbenutte transportcapaciteit** (dit is een werknaam, https://begrippen.netbeheernederland.nl/doc/2whwi[ATC] - (https://begrippen.netbeheernederland.nl/doc/7bs28[BTC] + https://begrippen.netbeheernederland.nl/doc/7n44w[GTC]))
+  * van MS/LS-transformatoren
+  * in https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
+  * zowel invoeding (+ en -) als afname (+ en -)
+  * drie jaren vooruit geprognotiseerd
+  * in tijdsblokken van 15 minuten die
+  * jaarlijks wordt bijgewerkt en die
+  * aansluit bij de Capaciteitskaart
+
+  |dat geeft inzicht in de aard van de congestie waardoor ik het juiste energie-advies kan geven.
  
 |===
-
-// fe 1: ik wil weten welke batterijoplossingen (ten behoeve van verzwaring of als  regelmiddel) bij dit https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied] haalbaar zijn.
-// fe 2: ik weten wanneer de congestie voor dit congestiegebied op MS-niveau is opgelost.
 
 == Dataservice
 
@@ -80,8 +88,7 @@ include::partial$four_v.adoc[]
 |_Kan in deze fase nog niet bepaald worden._
 
 |Velocity
-|_Kan in deze fase nog niet bepaald worden._
-
+|Laag, maximaal vier keer per jaar
 |===
 
 == Voorwaarden
@@ -103,4 +110,4 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
  
 |===
 
-Publicatiedatum 20261026.
+Publicatiedatum maandag 16 november 2026.
