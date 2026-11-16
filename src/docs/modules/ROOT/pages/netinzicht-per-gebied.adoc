@@ -56,6 +56,10 @@ gebruikt:
 |Equipment >= 3.0
 |`ActivePowerLimit` op `PowerTransformer` of `SeriesEquipmentDependentLimit`.
 
+|Benodigde transportcapaciteit
+|Operation >= 3.0
+|-
+
 |Connectiviteit (huidig net)
 |Equipment >= 3.0
 |Er wordt een JSON-LD bestand gemaakt voor elk onderstation (`Substation` met
@@ -120,10 +124,15 @@ Dataportaal_ van _Partners in Energie_.
 |Aanname
 |De data wordt als _open dataproduct_ ontsloten.
 
-|06-11-2026
-|Aanname
-|EDSN maakt een JSON-LD bestand per onderstation (OS). Hiervoor worden
-stations/overdrachtspunten op LS-niveau geaggregeerd tot MS-niveau. Dit
-resulteert in totaal ~200 JSON-LD bestanden voor publicatie.
+|16-11-2026
+|Beslissing
+|EDSN maakt een JSON-LD bestand per onderstation (OS). Vanuit het OS (150 kV of
+220 kV) wordt de hele stationshiërarchie vanuit perspectief van de
+transformatoren tot 0.4 kV gepubliceerd. Dit resulteert in totaal ~200 JSON-LD
+bestanden voor publicatie.
+
+|16-11-2026
+|Beslissing
+|Stationspositie wordt als WGS84-positie gepubliceerd.
 
 |===
