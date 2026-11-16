@@ -62,9 +62,9 @@ gebruikt:
 
 |Connectiviteit (huidig net)
 |Equipment >= 3.0
-|Er wordt een JSON-LD bestand gemaakt voor elk onderstation (`Substation` met
-`BaseVoltage` van 150 kV of 220 kV secundair) met bijbehorende
-`PowerTransformer`-s en postcodegebieden.
+|Er wordt een JSON-LD bestand gemaakt vanaf elk onderstation (`Substation` met
+`BaseVoltage` van 150 kV of 220 kV secundair) tot aan de bijbehorende
+laagspanningsstations (0,4 kV) met `PowerTransformer`-s en postcodegebieden.
 
 |Locatie (postcode6)
 |Geographical Location >= 1.3
