@@ -46,14 +46,14 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 
   * zogenoemde **onbenutte transportcapaciteit** (dit is een werknaam, https://begrippen.netbeheernederland.nl/doc/2whwi[ATC] - (https://begrippen.netbeheernederland.nl/doc/7bs28[BTC] + https://begrippen.netbeheernederland.nl/doc/7n44w[GTC]))
   * van MS/LS-transformatoren
-  * in een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
+  * in https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
   * zowel invoeding (+ en -) als afname (+ en -)
   * drie jaren vooruit geprognotiseerd
   * in tijdsblokken van 15 minuten die
-  * jaarlijks wordt bijgewerkt en 
+  * jaarlijks wordt bijgewerkt en die
   * aansluit bij de Capaciteitskaart
 
-  |dat geeft inzicht in de aard van de congestie.
+  |dat geeft inzicht in de aard van de congestie waardoor ik het juiste energie-advies kan geven.
  
 |===
 
@@ -88,8 +88,7 @@ include::partial$four_v.adoc[]
 |_Kan in deze fase nog niet bepaald worden._
 
 |Velocity
-|_Kan in deze fase nog niet bepaald worden._
-
+|Laag, maximaal vier keer per jaar
 |===
 
 == Voorwaarden
@@ -111,4 +110,4 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
  
 |===
 
-Publicatiedatum 20261026.
+Publicatiedatum maandag 16 november 2026.
