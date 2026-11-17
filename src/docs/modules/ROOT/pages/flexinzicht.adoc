@@ -44,18 +44,20 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 //een uniform overzicht van https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige], https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde] en https://begrippen.netbeheernederland.nl/doc/bma66[regelbare] https://begrippen.netbeheernederland.nl/doc/dwk8c[transportcapaciteit] in een https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied]
   a|een uniform overzicht van
 
-  * zogenoemde **onbenutte transportcapaciteit** (dit is een werknaam, https://begrippen.netbeheernederland.nl/doc/2whwi[ATC] - (https://begrippen.netbeheernederland.nl/doc/7bs28[BTC] + https://begrippen.netbeheernederland.nl/doc/7n44w[GTC]))
+  * zogenoemde **onbenutte transportcapaciteit**^1^
   * van MS/LS-transformatoren
-  * in https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
+  * in https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied]en , niet https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
   * zowel invoeding (+ en -) als afname (+ en -)
   * drie jaren vooruit geprognotiseerd
-  * in tijdsblokken van 15 minuten die
-  * jaarlijks wordt bijgewerkt en die
+  * in tijdsblokken van 60 minuten (uur) die
+  * elk kwartaal wordt bijgewerkt en die
   * aansluit bij de Capaciteitskaart
 
   |dat geeft inzicht in de aard van de congestie waardoor ik het juiste energie-advies kan geven.
  
 |===
+
+^1^ Dit is een werknaam. Het wordt ook wel GRTC (geprognotiseerde rest transportcapaciteit) genoemd en het is GATC (geprognotiseerde aanwezige transportcapaciteit) verminderd met GBTC (geprognotiseerde belasting van de transportcapaciteit). Formele definitie en formulering door Team Semantiek (Betekenis) volgt.
 
 == Dataservice
 
@@ -88,7 +90,7 @@ include::partial$four_v.adoc[]
 |_Kan in deze fase nog niet bepaald worden._
 
 |Velocity
-|Laag, maximaal vier keer per jaar
+|Vier keer per jaar
 |===
 
 == Voorwaarden
@@ -108,6 +110,61 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
  |TA {counter:bea} |Beslissing |We prognotiseren 3 jaren vooruit
  |TA {counter:bea} |Beslissing |Wachtrij-informatie is buiten scope.
  
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Voedingsgebied, niet congestiegebied
+  
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |MS, niet LS en (nog) niet (E)HS
+  
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Voedingsgebied, niet congestiegebied
+
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Prognose 3 jaren, (nog) niet 10 jaren
+
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Geen historische cijfers
+
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Granulariteit per uur, niet per 15 minuten
+
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Geen aggregatie per dag, maand, jaar
+
+  |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Voedingsgebied, niet congestiegebied
+
+ |TA {counter:bea} 
+ |Aaname 
+// [Doco 00.05] - Overzicht.ppt
+ |GATC en GBTC, niet GRTC (zelf rekenen). GATC en GBTC tbv herbruikbaarheid. 
+
+ |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Afname en invoeding apart
+
+  |TA {counter:bea} 
+ |Beslissing 
+// [Doco 00.05] - Overzicht.ppt
+ |Wachtrij buiten scope
+
 |===
 
-Publicatiedatum maandag 16 november 2026.
+Publicatiedatum dinsdag 17 november 2026.
