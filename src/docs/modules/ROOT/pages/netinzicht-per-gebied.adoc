@@ -106,6 +106,11 @@ Dit dataproduct wordt als _open data_ aangeboden.
 
 == Beslissingen en aannames
 
+*Beslissingen* zijn keuzes die zijn afgestemd met en akkoord bevonden door de
+betrokkenen. *Aannames* zijn keuzes gemaakt door de solutionarchitect, maar nog
+niet geaccordeerd. Indien een aanname geen beslissing teweeg brengt is een
+aanpassing in het ontwerp noodzakelijk.
+
 [cols="1, 1, 3"]
 |===
 |Datum |Type |Beschrijving
@@ -115,24 +120,38 @@ Dit dataproduct wordt als _open data_ aangeboden.
 |Beschikbare data op MS/LS vanuit de _NBNL Profile Group_ wordt gepubliceerd
 als losstaand dataproduct.
 
-|05-11-2026
-|Beslissing
-|Beschikbare data wordt als dataset (JSON-LD) aangeboden op het _Centraal
-Dataportaal_ van _Partners in Energie_.
-
-|06-11-2026
-|Aanname
-|De data wordt als _open dataproduct_ ontsloten.
-
-|16-11-2026
-|Beslissing
-|EDSN maakt een JSON-LD bestand per onderstation (OS). Vanuit het OS (150 kV of
-220 kV) wordt de hele stationshiërarchie vanuit perspectief van de
-transformatoren tot 0.4 kV gepubliceerd. Dit resulteert in totaal ~200 JSON-LD
-bestanden voor publicatie.
-
 |16-11-2026
 |Beslissing
 |Stationspositie wordt als WGS84-positie gepubliceerd.
+
+|19-11-2026
+|Aanname
+|Beschikbare data wordt als dataset (JSON-LD) aangeboden op het _Centraal
+Dataportaal_ van _Partners in Energie_. #TODO: EDSN analyseert de impact
+van publicatie als a) JSON-LD; b) CSV of c) Excel-bestand#.
+
+|19-11-2026
+|Beslissing
+|De data wordt als _open dataproduct_ ontsloten. Mocht dit op een later moment
+een _gesloten dataproduct_ worden, wordt het ontwerp uitgebreid met de nodige
+kwaliteitseisen.
+
+|19-11-2026
+|Aanname
+|EDSN maakt een bestand per onderstation (OS). Vanuit het OS (150 kV of 220 kV)
+wordt de hele stationshiërarchie vanuit perspectief van de transformatoren tot
+0.4 kV gepubliceerd. Dit resulteert in totaal ~200 JSON-LD bestanden voor
+publicatie. #TODO: EDSN analyseert volume, waarop wordt besloten of splitsing
+noodzakelijk is#.
+
+|19-11-2026
+|Aanname
+|Het dataproduct wordt op basis van connectiviteit van het elektriciteitsnet
+samengesteld. #TODO: openstaande vraag EDSN over gebied vs. connectiviteit#.
+
+|19-11-2026
+|Beslissing
+|Gegevens van TenneT zijn buiten scope. Indien _netvlakagnostisch_ beschikbaar
+kan er later gekozen worden deze gegevens alsnog toe te voegen.
 
 |===
