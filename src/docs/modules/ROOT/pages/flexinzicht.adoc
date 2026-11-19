@@ -41,14 +41,14 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 
   |TA {counter:fe}
   |Als TA
-//een uniform overzicht van https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige], https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde] en https://begrippen.netbeheernederland.nl/doc/bma66[regelbare] https://begrippen.netbeheernederland.nl/doc/dwk8c[transportcapaciteit] in een https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied]
+//een uniforme prognose van https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige], https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde] en https://begrippen.netbeheernederland.nl/doc/bma66[regelbare] https://begrippen.netbeheernederland.nl/doc/dwk8c[transportcapaciteit] in een https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied]
   a|een uniform overzicht van
 
   * zogenoemde **onbenutte transportcapaciteit**^1^
   * van MS/LS-transformatoren
-  * in https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied]en , niet https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
-  * zowel invoeding (+ en -) als afname (+ en -)
-  * drie jaren vooruit geprognotiseerd
+  * in https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied]en, niet uitsluitend van https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
+  * zowel invoeding (+ en -)**^2^** als afname (+ en -)
+  * drie jaren vooruit geprognostiseerd
   * in tijdsblokken van 60 minuten (uur) die
   * elk kwartaal wordt bijgewerkt en die
   * aansluit bij de Capaciteitskaart
@@ -57,7 +57,9 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
  
 |===
 
-^1^ Dit is een werknaam. Het wordt ook wel GRTC (geprognotiseerde rest transportcapaciteit) genoemd en het is GATC (geprognotiseerde aanwezige transportcapaciteit) verminderd met GBTC (geprognotiseerde belasting van de transportcapaciteit). Formele definitie en formulering door Team Semantiek (Betekenis) volgt.
+^1^ Dit is een werknaam. Het wordt ook wel GRTC (geprognostiseerde rest transportcapaciteit) genoemd en het is GATC (geprognostiseerde aanwezige transportcapaciteit) verminderd met GBTC (geprognostiseerde belasting van de transportcapaciteit), met één variant voor afname en één voor invoeding. Formele definitie en formulering door Team Semantiek (Betekenis) volgt.
+
+^2^ *+* betekent dat de waarde een geprognostiseerde onderbenutting is en *-* betekent dat de waarde een gegrognostiseerde overbenutting is.
 
 == Dataservice
 
@@ -104,67 +106,57 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 |===
 |ID |Type |Beschrijving
 
- |TA {counter:bea} |Aanname |Data wordt aangeleverd conform het ingerichte proces: Bij elke __system operator__ (DSO, TSO) door het __data deel team__ per NBNL Profiel (bouwblok) in JSON-LD validerend tegen de bijbehorende ShaCL
- |TA {counter:bea} |Aanname |Doel is inzicht, geen sturing, geen financiële afhandeling.
- |TA {counter:bea} |Aanname |Alleen huidig net en geen geplande uitbreidingen
- |TA {counter:bea} |Beslissing |We prognotiseren 3 jaren vooruit
- |TA {counter:bea} |Beslissing |Wachtrij-informatie is buiten scope.
+ |TA {counter:bea} 
+ |Aanname 
+ |De data voor dit dataproduct wordt aangeleverd conform het ingerichte proces: Bij elke __system operator__ (DSO, TSO) door het __data deel team__ per NBNL Profiel (bouwblok) in JSON-LD validerend tegen de bijbehorende ShaCL
+ 
+ |TA {counter:bea} 
+ |Aanname 
+ |Het doel van die dataproduct is _inzicht_, niet _sturing_ en ook niet _financiële afhandeling_
+ 
+ |TA {counter:bea} 
+ |Beslissing 
+ |Dit dataproduct prognotiseert tot 3 jaren vooruit
+ 
+ |TA {counter:bea} 
+ |Beslissing 
+ |Voor dit dataproduct is _wachtrij-informatie_ buiten scope.
  
  |TA {counter:bea} 
  |Beslissing 
 // [Doco 00.05] - Overzicht.ppt
- |Voedingsgebied, niet congestiegebied
+ |Dit dataproduct geef inzicht in _voedingsgebieden_, niet uitsluitend _congestiegebieden_
   
  |TA {counter:bea} 
  |Beslissing 
 // [Doco 00.05] - Overzicht.ppt
- |MS, niet LS en (nog) niet (E)HS
+ |Dit dataproduct geeft inzicht MS-niveau, niet LS en (nog) niet (E)HS
   
  |TA {counter:bea} 
  |Beslissing 
 // [Doco 00.05] - Overzicht.ppt
- |Voedingsgebied, niet congestiegebied
+ |Dit dataproduct bevat __prognoses__, geen _historische cijfers_
 
  |TA {counter:bea} 
  |Beslissing 
 // [Doco 00.05] - Overzicht.ppt
- |Prognose 3 jaren, (nog) niet 10 jaren
+ |De granulariteit van dit dataproduct is per uur, niet per 15 minuten.
 
  |TA {counter:bea} 
  |Beslissing 
 // [Doco 00.05] - Overzicht.ppt
- |Geen historische cijfers
-
- |TA {counter:bea} 
- |Beslissing 
-// [Doco 00.05] - Overzicht.ppt
- |Granulariteit per uur, niet per 15 minuten
-
- |TA {counter:bea} 
- |Beslissing 
-// [Doco 00.05] - Overzicht.ppt
- |Geen aggregatie per dag, maand, jaar
-
-  |TA {counter:bea} 
- |Beslissing 
-// [Doco 00.05] - Overzicht.ppt
- |Voedingsgebied, niet congestiegebied
+ |Dit dataproduct bevat geen aggregatie per dag, maand of jaar
 
  |TA {counter:bea} 
  |Aaname 
 // [Doco 00.05] - Overzicht.ppt
- |GATC en GBTC, niet GRTC (zelf rekenen). GATC en GBTC tbv herbruikbaarheid. 
+ |Dit dataproduct bevat geen afgeleide data
 
  |TA {counter:bea} 
  |Beslissing 
 // [Doco 00.05] - Overzicht.ppt
- |Afname en invoeding apart
-
-  |TA {counter:bea} 
- |Beslissing 
-// [Doco 00.05] - Overzicht.ppt
- |Wachtrij buiten scope
+ |Dit dataproduct geeft inzicht in afname en invoeding los van elkaar en niet gecombineerd
 
 |===
 
-Publicatiedatum dinsdag 17 november 2026.
+Publicatiedatum donderdag 19 november 2026.
