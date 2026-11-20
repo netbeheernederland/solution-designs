@@ -63,9 +63,11 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 
 == Dataservice
 
-=== Gebruiksscenario
+include::partial$diagrams/flexinzicht/dataservice.adoc[]
 
-_Kan in deze fase nog niet bepaald worden._
+=== Architectuur
+
+include::partial$diagrams/flexinzicht/architecture.adoc[]
 
 == Dataset
 
@@ -86,13 +88,13 @@ include::partial$four_v.adoc[]
 |_Kan in deze fase nog niet bepaald worden._
 
 |Variety
-|_Kan in deze fase nog niet bepaald worden._
+|Gestructureerd
 
 |Veracity
-|_Kan in deze fase nog niet bepaald worden._
+|Hoog, de dataset wordt samengesteld uit gegevens vanuit de _NBNL Profile Group_.
 
 |Velocity
-|Vier keer per jaar
+|Laag, vier keer per jaar
 |===
 
 == Voorwaarden

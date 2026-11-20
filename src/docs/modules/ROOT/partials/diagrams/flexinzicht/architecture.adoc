@@ -1,0 +1,156 @@
+Vanuit architectuurperspectief zijn de volgende keuzes gemaakt:
+
+.Architectuur
+[d2,svg,theme=4,scaledwidth=100%]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+
+grid-rows: 5
+grid-columns: 5
+
+vertical-gap: 80
+horizontal-gap: 160
+
+classes: {
+  *: {
+    style: {
+      shadow: true
+    }
+  }
+  empty: {
+    label: ""
+    style: {
+      fill: transparent
+      stroke-width: 0
+    }
+  }
+  verb: {
+    style: {border-radius: 30}
+  }
+  noun: {
+    style: {border-radius: 4}
+  }
+  artifact: {shape: page}
+  business: {
+    style: {
+      fill: "#ffffaf"
+    }
+  }
+  application: {
+    style: {
+      fill: "#afffff"
+    }
+  }
+  technology: {
+    style: {
+      fill: "#afffaf"
+    }
+  }
+}
+
+Netbeheerder.class: [noun; business]
+1.class: empty
+EDSN.class: [noun; business]
+2.class: empty
+Consumer.class: [noun; business]
+
+3.class: empty
+4.class: empty
+Broker.class: [noun; business]
+5.class: empty
+6.class: empty
+
+7.class: empty
+8.class: empty
+Extract.class: [verb; business]
+Transform.class: [verb; business]
+Load.class: [verb; business]
+
+"Dataloket".class: [verb; application]
+"Profile".class: [artifact; application]
+"File Gateway".class: [verb; application]
+"Data Product".class: [artifact; application]
+"Energiedataportaal".class: [verb; application]
+
+9.class: empty
+"JSON-LD".class: [artifact; technology]
+10.class: empty
+"JSON-LD2": {
+    class: [artifact; technology]
+    label: JSON-LD
+}
+
+Extract -> Transform: "triggers"
+Transform -> Load: "triggers"
+Transform -> "Data Product": "accesses (write)"
+"File Gateway" -> "Extract": "serves"
+"File Gateway" -> "Profile": "accesses\n(read)"
+Load -> Consumer: "serves"
+EDSN -> Broker: "assigned to"
+Broker -> Extract: "assigned to"
+"JSON-LD" -> "Profile": "realises"
+"Dataloket" -> "Profile": "accesses\n(write)"
+"Netbeheerder" -> "Dataloket": "assigned to"
+"Energiedataportaal" -> "Load": "serves"
+"Energiedataportaal" -> "Data Product": "accesses (read)"
+"JSON-LD2" -> "Data Product": "realises"
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  business_color: "" {
+    style: {
+      fill: "#ffffaf"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  business_text: "Business" {
+    shape: text
+  }
+  application_color: "" {
+    style: {
+      fill: "#afffff"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  application_text: "Application" {
+    shape: text
+  }
+  technology_color: "" {
+    style: {
+      fill: "#afffaf"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  technology_text: "Technology" {
+    shape: text
+  }
+}
+----
+
+* Netbeheerders leveren via het eigen _Dataloket_ _JSON-LD_ (RDF) onder de
+  _NBNL Profile Group_;
+* _JSON-LD_ wordt aangeleverd bij _EDSN_ (Broker) via de _File Gateway_;
+* _EDSN_ verwerkt de aangeleverde profiles tot een dataproduct geschikt voor
+  afname door een _Consumer_, via de processen _Extract_ en _Load_;
+* het dataproduct voor de _Consumer_ wordt als _JSON-LD_ (RDF) via het
+  _Energiedataportaal_, onder het model beheerd door _Team Semantiek_, NBNL.
