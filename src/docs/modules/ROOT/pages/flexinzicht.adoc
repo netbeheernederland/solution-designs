@@ -63,11 +63,11 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 
 == Dataservice
 
-include::partial$diagrams/flexinzicht/dataservice.adoc[]
+include::partial$flexinzicht/dataservice.adoc[]
 
 === Architectuur
 
-include::partial$diagrams/flexinzicht/architecture.adoc[]
+include::partial$flexinzicht/architecture.adoc[]
 
 == Dataset
 
