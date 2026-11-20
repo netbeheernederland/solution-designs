@@ -86,7 +86,7 @@ gebruikt:
 `SeriesEquipmentDependentLimit`.
 
 |Belastingprofiel (historisch, 1j, 15m)
-|Operation >= 3.0
+|Operation >= 3.1
 |kwartierwaarden gepubliceerd als `Analog` met corresponderende `AnalogValue`-s
 met `timeStamp`.
 
