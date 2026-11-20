@@ -171,6 +171,6 @@ losstaand dataproduct. Het dataproduct bevat alleen LS-netstations.
 
 |16-11-2026
 |Aanname
-|CPO-naam is geen onderdeel van het dataproduct.
+|CPO-naam is (nog) geen onderdeel van het dataproduct.
 
 |===
