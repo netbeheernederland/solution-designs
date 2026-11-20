@@ -53,11 +53,11 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
   * elk kwartaal wordt bijgewerkt en die
   * aansluit bij de Capaciteitskaart
 
-  |dat geeft inzicht in de aard van de congestie waardoor ik het juiste energie-advies kan geven.
+  |dat geeft inzicht in de frequentie en duur van de verwachte (over)belasting in de voedingsgebieden waardoor ik het juiste energie-advies kan geven.
  
 |===
 
-^1^ Dit is een werknaam. Het wordt ook wel GRTC (geprognostiseerde rest transportcapaciteit) genoemd en het is GATC (geprognostiseerde aanwezige transportcapaciteit) verminderd met GBTC (geprognostiseerde belasting van de transportcapaciteit), met één variant voor afname en één voor invoeding. Formele definitie en formulering door Team Semantiek (Betekenis) volgt.
+^1^ Dit is een werknaam. Het wordt ook wel GRTC (geprognostiseerde resttransportcapaciteit) genoemd en het is GATC (geprognostiseerde aanwezige transportcapaciteit) verminderd met GBTC (geprognostiseerde belasting van de transportcapaciteit), met één variant voor afname en één voor invoeding. Formele definitie en formulering door Team Semantiek (Betekenis) volgt.
 
 ^2^ *+* betekent dat de waarde een geprognostiseerde onderbenutting is en *-* betekent dat de waarde een gegrognostiseerde overbenutting is.
 
@@ -159,4 +159,4 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 
 |===
 
-Publicatiedatum donderdag 19 november 2026.
+Publicatiedatum vrijdag 20 november 2026.
