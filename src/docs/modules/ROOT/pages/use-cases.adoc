@@ -243,6 +243,21 @@ a|
 a|
 * `?`
 
+|#Woningcorporatie wil woningen verduurzamen#
+|LS
+a|
+* Aanwezige transportcapaciteit
+* *Belastingprofiel (prognose, 3j, 1u)*
+* Benodigde transportcapaciteit
+* Connectiviteit (huidig net)
+* Knelpunt
+* Locatie (postcode+huisnummer)
+* Locatie (WGS84)
+* Netveiligheid
+* Overdrachtspunt
+* Topologie
+* Voedingsgebied
+
 |===
 
 == Onderwerpen
@@ -274,6 +289,11 @@ a|
 * `{op}Analog[Analog]`
 
 |Belastingprofiel (historisch, 24+48u, 15m)
+|Operation
+a|
+* `{op}Analog[Analog]`
+
+|Belastingprofiel (prognose, 3j, 1u)
 |Operation
 a|
 * `{op}Analog[Analog]`
