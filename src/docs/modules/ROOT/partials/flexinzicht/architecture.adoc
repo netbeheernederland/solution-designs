@@ -1,3 +1,7 @@
+.Architectuur (click to expand)
+[%collapsible]
+====
+
 Vanuit architectuurperspectief zijn de volgende keuzes gemaakt:
 
 .Architectuur
@@ -154,3 +158,5 @@ legend: "" {
   afname door een _Consumer_, via de processen _Extract_ en _Load_;
 * het dataproduct voor de _Consumer_ wordt als _JSON-LD_ (RDF) via het
   _Energiedataportaal_, onder het model beheerd door _Team Semantiek_, NBNL.
+
+====

@@ -63,7 +63,12 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 
 == Dataservice
 
-include::partial$flexinzicht/dataservice.adoc[]
+Het gebruiksscenario beschrijft niet het uitvalproces (_happy flow_), deze
+stappen dienen apart beschreven en geïmplementeerd te worden.
+
+=== Gebruiksscenario
+
+include::partial$flexinzicht/gebruiksscenario.adoc[]
 
 === Architectuur
 

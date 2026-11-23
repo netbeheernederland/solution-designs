@@ -1,7 +1,6 @@
-Het gebruiksscenario beschrijft niet het uitvalproces (_happy flow_), deze
-stappen dienen apart beschreven en geïmplementeerd te worden.
-
-=== Gebruiksscenario
+.Gebruiksscenario (click to expand)
+[%collapsible]
+====
 
 Een externe partij verkrijgt toegang tot een openbaar beschikbare dataset
 vanuit het Energiedataportaal voor hergebruik binnen eigen processen of
@@ -30,3 +29,4 @@ Derde partij -> Derde partij: "5. Verwerkt en gebruikt data"
 3. De derde partij vraagt de geselecteerde dataset op;
 4. Het Energiedataportaal levert de dataset aan de derde partij;
 5. De derde partij verwerkt de ontvangen gegevens voor het beoogde gebruiksdoel.
+====
