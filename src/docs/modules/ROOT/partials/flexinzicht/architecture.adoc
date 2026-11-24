@@ -1,4 +1,4 @@
-.Architectuur (click to expand)
+.Architectuur (klik op *Architectuur* om het uit te klappen)
 [%collapsible]
 ====
 

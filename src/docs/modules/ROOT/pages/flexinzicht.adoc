@@ -9,7 +9,7 @@ include::partial$data_product.adoc[]
 
 == Reikwijdte
 
-Binnen Netbeheer Nederland (NBNL) lopen meerdere initiatieven die moeten resulteren in dataproducten met 'flex-informatie'. Flexinzicht is een open dataproduct, gebaseerd op de zogenoemde _bouwblokken_ (https://modellen.netbeheernederland.nl/data-products/information-models/nbnl-profile-group[NBNL Profile Group,window=read-later]), het is de basis voor dataproducten die met steeds meer 'flex-informatie' steeds meer van deze initiatieven ondersteunen. 
+Binnen Netbeheer Nederland (NBNL) lopen meerdere initiatieven die moeten resulteren in dataproducten met 'flex-informatie'. Flexinzicht is een open dataproduct, gebaseerd op de zogenoemde _bouwblokken_ (https://modellen.netbeheernederland.nl/data-products/information-models/nbnl-profile-group[NBNL Profile Group,window=read-later]). Het is de basis voor dataproducten die met steeds meer 'flex-informatie' steeds meer van deze initiatieven ondersteunen. 
 
 .Rollen
 [cols="1, 2"]
@@ -25,13 +25,6 @@ Binnen Netbeheer Nederland (NBNL) lopen meerdere initiatieven die moeten resulte
 
 Voor dit dataproduct gelden functionele eisen (_functional requirements_). Deze functionele eisen vertellen wie ("*Als rol*") welke data ("*Wil ik*") nodig heeft en welke meerwaarde ermee gecreëerd wordt ("*Want*"). 
 
-////
-Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct voor hem heeft. Wij werken nu onde de aanname dat:
-
-1. de Technisch Adviseur wil weten welke batterijoplossingen (ten behoeve van verzwaring of als regelmiddel) bij dit https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied] haalbaar zijn.
-2. de Technisch Adviseur een uniform overzicht van de oplosdatums (datum vanaf wanneer de congestie is opgelost) van alle bovenliggende congestiegebieden waar een congestiegebied op MS-niveau deel van uit maakt. Deze informatie zal echter beschibaar worden gesteld in een volgende versie van de Capaciteitskaart. Wel is het zo dat de dataproducten Flexinzicht en Capaciteitskaart op elkaar moeten aansluiten.
-////
-
 // In de functionele eisen kunnen sommige woorden #gemarkeerd# zijn. Dat betekent dat de betekenis van dit woord (in deze context) onduidelijk is. Verderop, bij de *Beslissingen en aannames*, wordt een aanname gedaan over die betekenis. Als dat echter niet lukt, of als er een toelichting nodig is dan is de aanname een verzoek om toelichting. 
 
 .Functionele eisen
@@ -44,27 +37,23 @@ Aan de Technisch Adviseur wordt nog gevraagd welke meerwaarde het dataproduct vo
 //een uniforme prognose van https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige], https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde] en https://begrippen.netbeheernederland.nl/doc/bma66[regelbare] https://begrippen.netbeheernederland.nl/doc/dwk8c[transportcapaciteit] in een https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied] en een https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebied]
   a|een uniform overzicht van
 
-  * zogenoemde **onbenutte transportcapaciteit**^1^
+  * geprognostiseerde https://begrippen.netbeheernederland.nl/doc/2whwi[aanwezige transportcapaciteit], zowel ten behoeve van zowel https://begrippen.netbeheernederland.nl/doc/3j33z[afname] als van https://begrippen.netbeheernederland.nl/doc/j8cpp[invoeding] (GATCa, resp. GATCi)
+  * geprognostiseerde https://begrippen.netbeheernederland.nl/doc/7bs28[benodigde  transportcapaciteit], zowel ten behoeve van zowel https://begrippen.netbeheernederland.nl/doc/3j33z[afname] als van https://begrippen.netbeheernederland.nl/doc/j8cpp[invoeding] (GBTCa, resp. GBTCi)
   * van MS/LS-transformatoren
-  * in https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied]en, niet uitsluitend van https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden]
-  * zowel invoeding (+ en -)**^2^** als afname (+ en -)
-  * drie jaren vooruit geprognostiseerd
-  * in tijdsblokken van 60 minuten (uur) die
-  * elk kwartaal wordt bijgewerkt en die
-  * aansluit bij de Capaciteitskaart
+  * in https://begrippen.netbeheernederland.nl/doc/8eytm[voedingsgebied]en, niet uitsluitend van https://begrippen.netbeheernederland.nl/doc/7qmcr[congestiegebieden],
+   * drie jaren vooruit geprognostiseerd, in tijdsblokken van 60 minuten (uur) die
+  * elk kwartaal wordt bijgewerkt en waarvan
+  * de definities conform de definities van de Capaciteitskaart zijn.
 
   |dat geeft inzicht in de frequentie en duur van de verwachte (over)belasting in de voedingsgebieden waardoor ik het juiste energie-advies kan geven.
  
 |===
 
-^1^ Dit is een werknaam. Het wordt ook wel GRTC (geprognostiseerde resttransportcapaciteit) genoemd en het is GATC (geprognostiseerde aanwezige transportcapaciteit) verminderd met GBTC (geprognostiseerde belasting van de transportcapaciteit), met één variant voor afname en één voor invoeding. Formele definitie en formulering door Team Semantiek (Betekenis) volgt.
-
-^2^ *+* betekent dat de waarde een geprognostiseerde onderbenutting is en *-* betekent dat de waarde een gegrognostiseerde overbenutting is.
+Het verschil tussen de GATCa en de GBTCa kan gecombineerd worden met de GBTCi. Hierdoor kan een  geprognostiseerd tekort aan transportcapaciteit ten behoeve van afname gecompenseerd worden door GBTCi. Iets soortgelijks geldt voor het verschil tussen GATCi en GBTCi.
 
 == Dataservice
 
-Het gebruiksscenario beschrijft niet het uitvalproces (_happy flow_), deze
-stappen dienen apart beschreven en geïmplementeerd te worden.
+Het gebruiksscenario beschrijft de _happy flow_, niet het uitvalproces. Deze dient apart beschreven en geïmplementeerd te worden.
 
 === Gebruiksscenario
 

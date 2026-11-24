@@ -1,10 +1,8 @@
-.Gebruiksscenario (click to expand)
+.Gebruiksscenario (klik op *Gebruiksscenario* om het uit te klappen)
 [%collapsible]
 ====
 
-Een externe partij verkrijgt toegang tot een openbaar beschikbare dataset
-vanuit het Energiedataportaal voor hergebruik binnen eigen processen of
-systemen.
+Een derde partij heeft toegang tot een openbaar beschikbare dataset vanuit het Energiedataportaal voor hergebruik binnen eigen processen of systemen.
 
 .Gebruiksscenario
 [d2,svg,theme=4,width=60%]
