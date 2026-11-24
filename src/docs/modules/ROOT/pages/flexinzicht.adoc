@@ -144,7 +144,7 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
  |Dit dataproduct bevat geen aggregatie per dag, maand of jaar
 
  |TA {counter:bea} 
- |Aaname 
+ |Aanname 
 // [Doco 00.05] - Overzicht.ppt
  |Dit dataproduct bevat geen afgeleide data
 
@@ -153,6 +153,10 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 // [Doco 00.05] - Overzicht.ppt
  |Dit dataproduct geeft inzicht in afname en invoeding los van elkaar en niet gecombineerd
 
+ |TA {counter:bea}
+ |Aanname
+ |Elke netbeheerder heeft meerdere manieren om de geprognostiseerde transportcapaciteiten te berekenen, maar ze gebruiken altijd dezelfde. Het is geen probleem als deze berekeningen tussen netbeheerders  verschillen.
+
 |===
 
-Publicatiedatum vrijdag 20 november 2026.
+Publicatiedatum dinsdag 24 november 2026.
