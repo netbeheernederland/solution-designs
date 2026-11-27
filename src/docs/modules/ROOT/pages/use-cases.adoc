@@ -168,7 +168,7 @@ a|
 * Voedingsgebied
 
 |Netinzicht per gebied
-|HS & MS
+|MS & LS
 a|
 * Aanwezige transportcapaciteit
 * Connectiviteit (huidig net)
