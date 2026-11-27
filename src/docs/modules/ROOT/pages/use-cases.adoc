@@ -134,12 +134,7 @@ a|
 * Voedingsgebied
 * Wachtrij
 
-|Flex forecast per gebied
-|HS & MS
-a|
-* `?`
-
-|Inzicht in flexgebieden
+|Flexinzicht per gebied
 |MS & LS
 a|
 * Aanwezige transportcapaciteit
@@ -173,7 +168,7 @@ a|
 * Voedingsgebied
 
 |Netinzicht per gebied
-|HS & MS
+|MS & LS
 a|
 * Aanwezige transportcapaciteit
 * Connectiviteit (huidig net)
