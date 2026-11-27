@@ -65,6 +65,76 @@ include::partial$flexinzicht/architecture.adoc[]
 
 == Dataset
 
+Voor de informatiebehoefte van _flexinzicht_ worden de volgende
+https://modellen.netbeheernederland.nl/solution-designs/use-cases#_onderwerpen[onderwerpen]
+gebruikt:
+
+[cols="1, 1, 2"]
+|===
+|Onderwerp |Profile |Opmerking
+
+|Aanwezige transportcapaciteit
+|Equipment ≥ 3.0
+|`ActivePowerLimit` op `PowerTransformer` of `SeriesEquipmentDependentLimit`.
+
+|Benodigde transportcapaciteit
+|Operation ≥ 3.0
+|-
+
+|Congestiegebied
+|Asset, Geographical Location
+|-
+
+|Connectiviteit (huidig net)
+|Equipment ≥ 3.0
+|Er wordt een JSON-LD bestand gemaakt vanaf elk onderstation (`Substation` met `BaseVoltage` van 150 kV of 220 kV secundair) tot aan de bijbehorende laagspanningsstations (0,4 kV) met `PowerTransformer`-s en postcodegebieden.
+
+|Gevraagde transportcapaciteit
+|Operation
+|-
+
+|Knelpunt
+|Equipment, Asset
+|-
+
+|Locatie (postcode+huisnummer)
+|Geographical Location ≥ 1.3
+|Postcodegebied (1234AB) ingevoed door `Substation`.
+
+|Locatie (WGS84)
+|Equipment, Geographical Location
+|-
+
+|Netuitbreiding
+|Asset
+|-
+
+|Netveiligheid
+|Equipment ≥ 3.0
+|SeriesEquipmentDependentLimit, daar waar groepen van netfuncties een gezamenlijke `Aanwezige transportcapaciteit` hebben.
+
+|Overdrachtspunt
+|Equipment, Topology
+|-
+
+|Regelbare transportcapaciteit
+|Operation
+|-
+
+|Topologie
+|Topology ≥ 2.0
+|relatie tussen overdrachtspunt en `PowerTransformerEnd`.
+
+|Voedingsgebied
+|Equipment ≥ 3.0, Topology
+|`TransformerEnd.endNumber` `2` of `3` als beginpunt van een voedingsgebied.
+
+|Wachtrij
+|Equipment, Operation
+|-
+
+|===
+
 === Volume, variety, veracity, velocity
 
 [NOTE]
@@ -72,24 +142,18 @@ include::partial$flexinzicht/architecture.adoc[]
 include::partial$four_v.adoc[]
 ====
 
-==== Dataset
-
-[cols="1, 3"]
+[cols="1, 1, 1, 1, 1"]
 |===
-|Type |Beschrijving
+|Dataproduct |Volume |Variety |Veracity |Velocity
 
-|Volume
+|flexinzicht
 |_Kan in deze fase nog niet bepaald worden._
-
-|Variety
 |Gestructureerd
-
-|Veracity
-|Hoog, de dataset wordt samengesteld uit gegevens vanuit de _NBNL Profile Group_.
-
-|Velocity
+|Hoog, de dataset wordt samengesteld uit gegevens vanuit de _NBNL Profile Group_
 |Laag, vier keer per jaar
+
 |===
+
 
 == Voorwaarden
 
@@ -159,4 +223,4 @@ Dit dataproduct wordt als _open_ dataproduct aangeboden.
 
 |===
 
-Publicatiedatum dinsdag 24 november 2026.
+Publicatiedatum vrijdag 27 november 2026.

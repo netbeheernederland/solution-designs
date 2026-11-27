@@ -1,5 +1,5 @@
-.Architectuur (klik op *Architectuur* om het uit te klappen)
-[%collapsible]
+.(Klik op *Architectuur* om het dicht danwel open te klappen.)
+[%collapsible%open]
 ====
 
 Vanuit architectuurperspectief zijn de volgende keuzes gemaakt:
